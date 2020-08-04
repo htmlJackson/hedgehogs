@@ -16,9 +16,11 @@
 
 .nav__list {
   display: flex;
+
   @media (min-width: 1200px) and (max-width: 1377px) {
     font-size: 14px;
   }
+
   @media (max-width: $mob) {
     flex-direction: column;
   }

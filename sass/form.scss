@@ -1,0 +1,148 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  color: $dark-green;
+}
+
+.form__select {
+  height: 23px;
+  padding: 0 10px;
+  margin-bottom: 20px;
+
+  background: #f8f8f8;
+  border-color: $green;
+  border-radius: 3px;
+
+  color: $dark-green;
+  font-size: 12px;
+  line-height: 14px;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.form__option {
+
+}
+
+.form__input {
+  padding: 0 25px;
+  margin-bottom: 10px;
+  flex-grow: 1;
+
+  background: #f8f8f8;
+  border: none;
+  border-radius: 4px;
+
+  line-height: 62px;
+  color: $dark-green;
+
+  &::placeholder {
+    color: $dark-green;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  &[type=number] {
+    -moz-appearance: textfield;
+  }
+
+  &:disabled {
+    color: $grey;
+    &::placeholder {
+      color: $grey;
+    }
+  }
+}
+
+.form__list {
+  margin-top: 15px;
+}
+
+.form__list-item {
+
+}
+
+.form__label {
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  &::before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    margin-right: 8px;
+    background: #F8F8F8;
+    border: 1px solid #70908B;
+    border-radius: 2px;
+  }
+
+  &::after {
+    display: none;
+
+    content: '';
+    position: absolute;
+    top: 9px;
+    left: 2.5px;
+
+    width: 5px;
+    height: 3px;
+
+    border: 1px solid $dark-green;
+    border-top: none;
+    border-right: none;
+    transform: rotate(-45deg);
+  }
+}
+
+
+.form__checkbox:checked ~ .form__label::after {
+  display: block;
+}
+
+.form__checkbox:disabled ~ .form__label,
+.form__checkbox:disabled ~ .form__label {
+  color: $grey;
+}
+
+.form__checkbox:disabled ~ .form__label::before,
+.form__checkbox:disabled ~ .form__label::after {
+  border-color: $grey;
+}
+
+.form__submit {
+  margin-top: 32px;
+  width: 100%;
+
+  &:disabled {
+    cursor: default;
+    background: $grey;
+    color: #e1e1e1;
+    opacity: 0.8;
+    &:hover {
+      background: $grey;
+      color: #e1e1e1;
+      opacity: 0.8;
+    }
+  }
+}
+
+.form__agreement {
+  text-align: center;
+  font-size: 10px;
+  line-height: 12px;
+}
+
+.form__anchor {
+  border-bottom: 1px solid $dark-green;
+}

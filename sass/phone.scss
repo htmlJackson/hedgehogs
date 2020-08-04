@@ -1,0 +1,80 @@
+.phone {
+  display: flex;
+  font-weight: 500;
+}
+
+.phone__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 20px;
+
+  @media (max-width: $mob) {
+    display: none;
+  }
+
+  &--mob {
+    display: none;
+  }
+
+  @media (max-width: $mob) {
+    &--mob {
+      display: flex;
+      margin-left: 0;
+      margin-top: 135px;
+
+      font-size: 14px;
+      line-height: 16px
+    }
+  }
+}
+
+.phone__callback-btn {
+  display: flex;
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(1.36deg, #B0D3CE 12.29%, #FFEDCE 83.89%);
+  box-shadow: -4px -4px 20px #FFFFFF, 4px 4px 20px #CFD7D3;
+  border-radius: 40px;
+
+  @media (max-width: $mob) {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+.phone__icon {
+  width: 100%;
+  height: 100%;
+  padding: 15px 8px 8px 15px;
+  @media (max-width: $mob) {
+    padding: 3px 8px 0px 10px;
+  }
+
+}
+
+.phone__callback {
+  font-family: $sans;
+  padding: 0;
+  padding-bottom: 2px;
+  font-weight: 500;
+  color: $dark-green;
+  text-align: left;
+  text-decoration: underline;
+  text-transform: lowercase;
+
+  &--white {
+    color: $white;
+  }
+}
+
+.phone__anchor {
+  font-family: 'Arial', sans-serif;
+  font-size: 22px;
+  line-height: 26px;
+  text-transform: uppercase;
+
+  @media (min-width: 1200px) and (max-width: 1377px) {
+    font-size: 14px;
+  }
+}

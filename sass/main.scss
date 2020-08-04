@@ -1,7 +1,10 @@
 .main {
-
-}
-
-.main__container {
-  flex-direction: column;
+  @media (max-width: $mob) {
+    background: url(img/2.png) no-repeat;
+    background-position: 0px 0;
+    background-size: 100%;
+  }
+  @media (max-width: 512px) {
+    background-position: 0 270px;
+  }
 }

@@ -1,0 +1,25 @@
+.btn {
+  display: flex;
+  justify-content: center;
+  width: 328px;
+  max-width: 100%;
+  padding: 24px 15px;
+
+  background: $green;
+  color: $white;
+  font-weight: 700;
+
+  text-align: center;
+
+  border-radius: 40px;
+  box-shadow: 4px 4px 20px #C2CCCA, -8px -8px 20px $white;
+
+  &:hover {
+    background: linear-gradient(90.68deg, #B0D3CE -2.41%, #FFEDCE 99.79%);
+    color: $dark-green;
+  }
+
+  &:active {
+    opacity: 0.9;
+  }
+}

@@ -8,6 +8,24 @@ const autoprefixer = require("autoprefixer");
 const sourcemaps = require("gulp-sourcemaps");
 const csso = require("gulp-csso");
 const postcss = require("gulp-postcss");
+const svgSprite = require('gulp-svg-sprite');
+
+var svgConfig = {
+    shape: {
+        dimension: {         // Set maximum dimensions
+            maxWidth: 500,
+            maxHeight: 500
+        },
+        spacing: {         // Add padding
+            padding: 0
+        }
+    },
+    mode: {
+        symbol: {
+            dest : '.'
+        }
+    }
+};
 
 gulp.task("sass", function () {
   return gulp.src("./sass/style.scss")
@@ -19,6 +37,12 @@ gulp.task("sass", function () {
     .pipe(sourcemaps.write("."))
     .pipe(gulp.dest("./"))
     .pipe(server.stream());
+});
+
+gulp.task('svg', function (cb) {
+  return gulp.src('img/svg/*.svg')
+    .pipe(svgSprite(svgConfig))
+    .pipe(gulp.dest('sprites'));
 });
 
 gulp.task("default", ["sass"], function() {

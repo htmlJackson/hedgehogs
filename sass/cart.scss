@@ -1,0 +1,41 @@
+.cart {
+  position: relative;
+  display: flex;
+  width: 44px;
+  height: 38px;
+  @media (max-width: $mob) {
+    width: 34px;
+    height: 28px;
+  }
+}
+
+.cart__icon {
+  width: 44px;
+  height: 38px;
+
+  @media (max-width: $mob) {
+    width: 34px;
+    height: 28px;
+    align-items: center;
+  }
+}
+
+.cart__counter {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 18px;
+  height: 18px;
+
+  background: $peach;
+
+  border-radius: 50%;
+  font-size: 10px;
+  font-weight: 700;
+  color: $black;
+}

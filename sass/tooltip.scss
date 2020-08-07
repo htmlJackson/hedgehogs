@@ -6,7 +6,7 @@
   width: 31px;
   height: 31px;
 
-  @media (max-width: $tablet) {
+  @media (max-width: 1290px) {
     display: none;
   }
 
@@ -15,7 +15,7 @@
     fill: $white;
     width: 22px;
     height: 22px;
-    @media (max-width: $tablet) {
+    @media (max-width: 1290px) {
       display: block;
       width: 12px;
       height: 12px;
@@ -53,7 +53,7 @@
     display: flex;
   }
 
-  @media (max-width: $tablet) {
+  @media (max-width: 1290px) {
     position: static;
     display: flex;
     width: auto;
@@ -77,6 +77,9 @@
     left: 0;
     right: 0;
     bottom: 0;
+  }
+  @media (max-width: 1290px) {
+    display: none;
   }
 }
 

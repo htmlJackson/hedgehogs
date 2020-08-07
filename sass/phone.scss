@@ -17,7 +17,7 @@
     display: none;
   }
 
-  @media (max-width: $mob) {
+  @media (max-width: $tablet) {
     &--mob {
       display: flex;
       margin-left: 0;

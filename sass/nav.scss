@@ -21,7 +21,7 @@
     font-size: 14px;
   }
 
-  @media (max-width: $mob) {
+  @media (max-width: $tablet) {
     flex-direction: column;
   }
 }
@@ -33,7 +33,7 @@
     margin-right: 0;
   }
 
-  @media (max-width: $mob) {
+  @media (max-width: $tablet) {
     margin-bottom: 25px;
     &:last-child {
       margin-bottom: 0;
@@ -43,6 +43,7 @@
 
 .nav__sublist {
   position: absolute;
+  z-index: 2;
   top: 150%;
   left: 0;
   visibility: hidden;
@@ -79,7 +80,7 @@
   margin-top: 3px;
   margin-right: 7px;
 
-  @media (max-width: $mob) {
+  @media (max-width: $tablet) {
     display: none;
   }
 }

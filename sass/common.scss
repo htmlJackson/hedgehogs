@@ -9,6 +9,7 @@ $mob: 767px;
 
 body {
   min-width: 320px;
+  margin: 0 auto;
   font-family: $sans;
   font-size: 14px;
   line-height: 22px;
@@ -17,11 +18,17 @@ body {
     url(img/bg-2.png),
     url(img/bg.png);
   background-repeat: no-repeat;
-  background-position: top;
+  background-position: center -370px;
+  background-size: cover;
+
+  @media (max-width: $tablet) {
+    background-position: center -90px, left 0 top -220px;
+    background-size: contain;
+  }
 
   @media (max-width: $mob) {
-    background: linear-gradient(0deg, rgba(255,255,255,1) 50%, rgba(234,238,239,1) 100%);
-
+    background: url(img/bg-mob.png) no-repeat 0 0;
+    background-size: contain;
   }
 }
 
@@ -55,6 +62,10 @@ button {
   max-width: 100%;
   padding: 0 10px;
   margin: 0 auto;
+
+  @media (max-width: $mob) {
+    padding: 0;
+  }
 }
 
 .visually-hidden {
@@ -67,6 +78,10 @@ button {
 
 .overlay {
   position: relative;
+  @media (max-width: $mob) {
+    overflow: hidden;
+  }
+
   &::before {
     content: '';
     position: absolute;
